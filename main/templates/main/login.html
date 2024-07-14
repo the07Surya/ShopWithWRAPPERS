@@ -1,0 +1,29 @@
+{% extends 'main/account_base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block body_account %}
+<form method="POST" class="signup_form mr-2 ml-2">
+    {% csrf_token %}
+    <fieldset>
+        {{ form|crispy }}
+    </fieldset>
+    <section class="mt-4 mr-1 ml-1">
+        <button type="submit">Log In</button>
+        <small>Don't have an account? &nbsp;<a href="{% url 'signup' %}">Sign Up</a></small>
+        <small>Forgotten <a href="{% url 'password_reset' %}">Password</a></small>
+    </section>
+    <div class="subtitle pt-2 mt-1"></div>
+</form>
+
+<script type="text/javascript">
+    // Ensure the script runs after the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Update the label text if it exists
+        var label = document.querySelector('label[for="id_username"]');
+        if (label) {
+            label.innerText = 'Email/Mobile No.';
+        }
+    });
+</script>
+{% endblock body_account %}
