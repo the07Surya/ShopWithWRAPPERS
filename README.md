@@ -12,4 +12,9 @@ Hey Guys,
   10. The customer can check their orders, cancellation of any order, edit the address info.
   11. The seller can add whenever the sale is going on and re-edit the price tag & adding the gst in the product option is there.
 These are some of key features that I've metioned above. Besides these there are so many small things are there in this site which always goes in favor with the customer and seller equally. 
- 
+
+ Steps:-
+ 1.Set up an environment
+ 2.Put your authorized emailid 
+ 3.Migrate all the models
+ 4.Run the server
